@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+}
+section {
+    background: url('./images/bg-pattern-desktop.svg') no-repeat left bottom;
+    background-size: cover;
+    height: 100vh;
+    padding: 5% 19% 10% 12%;
+    width: 60%;
+}
+.one{
+    font-weight: 50%;
+    color: hsl(0, 36%, 70%);
+    display: block;
+}
+.two{
+    margin-top:100px;
+    font-size:60px;
+    text-transform: uppercase;
+    letter-spacing:15px;
+    margin-bottom:15px;
+    display: block;
+}
+.three{
+    color: hsl(0, 36%, 70%);
+    line-height: 28px;
+    margin-bottom:35px;
+}
+#input_field{
+    position: relative;
+}
+input{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    height: 55px;
+    padding-left: 30px;
+    border: 1px solid hsl(0, 36%, 70%);
+    outline: none;
+    border-radius: 50px;
+}
+form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+form .error {
+    background: url('./images/icon-error.svg') no-repeat 75% 50%;
+    border: 2px solid hsl(0, 93%, 68%);
+}
+
+form button {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 17px;
+    height: 55px;
+    width: 22%;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    
+    border-radius: 50px;
+    box-shadow: 0 10px 15px 0 hsl(0, 54%, 87%);
+}
+form button:hover {
+    background-image: linear-gradient(hsla(0, 80%, 86%, 0.7), hsla(0, 80%, 86%, 0.7));
+    box-shadow: 0 10px 15px 0  hsla(0, 80%, 86%, 0.7);
+}
+form #err {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin: 10px 0 0 30px;
+}
+#desktop_girl_image {
+    width: 40%;
+}
+#desktop_girl_image img{
+    object-fit: cover;
+    height: 100vh;
+}
+#mobile_girl_image {
+    display: none;
+}
+
+#mobile_girl_image img{  
+    width: 100%;
+    object-fit: cover;
+}
+@media only screen and (max-width: 375px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 0;
+        width: 100%;
+    }
+
+    section .logo {
+        margin-bottom: 0;
+        padding: 20px 0 20px 30px;
+        text-align: left;
+    }
+
+    .logo img {
+        width: 30%;
+    }
+
+    section h1 {
+        font-size: 40px;
+        margin: 60px 0 20px 0;
+    }
+
+    section p {
+        line-height: 25px;
+        margin: 0 25px 40px 25px;
+    }
+
+    form {
+        margin: 0 25px 40px 25px;
+    }
+
+    form input {
+        height: 50px;
+        padding-left: 30px;
+    }
+
+    form button {
+        left: 75%;
+        height: 50px;
+        width: 28%;
+    }
+
+    form .error {
+        background: url('./images/icon-error.svg') no-repeat 70% 50%;
+    }
+
+    form #err {
+        text-align: left;
+    }
+
+    #mobile_girl_image {
+        display: block;
+    }
+
+    #desktop_girl_image {
+        display: none;
+        width: 100%;
+    }
+
+    
+}
